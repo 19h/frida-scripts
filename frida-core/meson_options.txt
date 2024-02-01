@@ -1,0 +1,84 @@
+option('assets',
+  type: 'combo',
+  choices: ['embedded', 'installed'],
+  value: 'embedded',
+  description: 'Whether assets such as frida-agent should be embedded vs installed and loaded at runtime'
+)
+
+option('asset_path_template',
+  type: 'string',
+  value: '',
+  description: 'Override the default installed asset path template'
+)
+
+option('helper_modern',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt frida-helper to embed for use on modern systems'
+)
+
+option('helper_legacy',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt frida-helper to embed for use on legacy systems'
+)
+
+option('agent_modern',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt agent to embed for use on modern targets'
+)
+
+option('agent_legacy',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt agent to embed for use on legacy targets'
+)
+
+option('agent_emulated_modern',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt agent to embed for use on modern emulated targets'
+)
+
+option('agent_emulated_legacy',
+  type: 'string',
+  value: '',
+  description: 'Prebuilt agent to embed for use on legacy emulated targets'
+)
+
+option('agent_dbghelp_prefix',
+  type: 'string',
+  value: '',
+  description: 'Location of DbgHelp binaries to embed alongside agent (Windows only)'
+)
+
+option('agent_symsrv_prefix',
+  type: 'string',
+  value: '',
+  description: 'Location of SymSrv binaries to embed alongside agent (Windows only)'
+)
+
+option('connectivity',
+  type: 'feature',
+  value: 'auto',
+  description: 'Internet connectivity features (TLS and ICE support)'
+)
+
+option('mapper',
+  type: 'feature',
+  value: 'auto',
+  description: 'Use our own out-of-process dynamic linker for injection on i/macOS'
+)
+
+option('compiler_snapshot',
+  type: 'feature',
+  value: 'auto',
+  description: 'Speed up compiler startup by using a snapshot'
+)
+
+option('tests',
+  type: 'boolean',
+  value: true,
+  description: 'Build tests'
+)
